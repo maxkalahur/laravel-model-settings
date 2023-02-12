@@ -33,5 +33,12 @@
         "psr-4": {
             "MaxKalahur\\LaravelModelSettings\\Tests\\": "tests"
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MaxKalahur\\LaravelModelSettings\\CustomSettingServiceProvider"
+            ]
+        }
+    },
 }
