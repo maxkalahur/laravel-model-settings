@@ -15,7 +15,7 @@ composer require maxkalahur/laravel-model-settings
 php artisan vendor:publish --provider="MaxKalahur\LaravelModelSettings\CustomSettingServiceProvider" --tag="migrations"
 ```
 ## Usage Instructions
-Add Trait `HasCustomSettings` and `private array $customSettings` to the Model.
+Add Trait `HasCustomSettings` and an attribute `array $customSettings` to the Model.
 ```
 use MaxKalahur\LaravelModelSettings\Traits\HasCustomSettings;
 
@@ -38,7 +38,12 @@ class DummyOrg extends Model
     }
 }
 ```
-**Methods of custom settings**
+**Methods of custom settings**:
+- `setCustomSetting( string $key, $val, bool $is_encrypted)`
+- `getCustomSetting( string $key )`
+- `deleteCustomSetting( string $key )`
+- `getAllCustomSettings()`
+- `deleteAllCustomSettings()`
 ```
 $org = DummyOrg::create();
 
