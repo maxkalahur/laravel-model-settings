@@ -1,6 +1,6 @@
 {
     "name": "maxkalahur/laravel-model-settings",
-    "description": "This package allows you to attach settings to the Laravel Models, save them in DB and encrypt them.",
+    "description": "This Laravel package allows you to attach settings to Laravel Models, save them in DB and encrypt.",
     "license": "MIT",
     "keywords": [
         "laravel",
