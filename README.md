@@ -1,5 +1,9 @@
 # laravel-model-settings
-This Laravel package allows you to attach settings to Laravel Models, save them in DB and encrypt.  
+This Laravel package allows to: 
+- **attach settings to Laravel Models** 
+- **store model settings in DB** 
+- **encrypt settings** in case of need with default Laravel's encryption via APP_KEY  
+
 Data types that can be used in CustomSettings: 
 - `bool`
 - `int`
