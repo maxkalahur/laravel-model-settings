@@ -39,8 +39,8 @@ $org = DummyOrg::create();
 $org->setCustomSetting('ADDRESS', 'Some address 59901 US'); 
 $org->getCustomSetting('ADDRESS');            // Returns 'Some address 59901 US'
 
-$org->setCustomSetting('SECRET_KEY', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', true);   // Save with encription
-$org->getCustomSetting('SECRET_KEY');         // returns 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+$org->setCustomSetting('SECRET_KEY', 'da39a3ee5e6b4b', true);   // Save with encription
+$org->getCustomSetting('SECRET_KEY');         // returns 'da39a3ee5e6b4b'
 
 $org->setCustomSetting('HAS_VISITS', true);
 $org->getCustomSetting('HAS_VISITS');         // returns (bool) true
