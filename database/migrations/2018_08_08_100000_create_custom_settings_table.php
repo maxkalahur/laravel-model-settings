@@ -22,8 +22,6 @@ class CreateCustomSettingsTable extends Migration
             $table->string('value', 512)->nullable();
             $table->boolean('is_encrypted')->default(false);
             $table->timestamps();
-
-            $table->index(['model_type', 'model_id', 'key']);
         });
     }
 
