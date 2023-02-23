@@ -9,7 +9,7 @@ class DummyUser extends Model
 {
     use HasCustomSettings;
 
-    protected $table = 'users';
+    protected $table = 'test_users';
 
     protected $fillable = [
         'name',
