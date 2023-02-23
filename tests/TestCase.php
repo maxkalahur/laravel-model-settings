@@ -2,6 +2,7 @@
 
 namespace MaxKalahur\LaravelModelSettings\Tests;
 
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use MaxKalahur\LaravelModelSettings\CustomSettingServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -10,7 +11,7 @@ use MaxKalahur\LaravelModelSettings\Tests\Models\DummyUser;
 
 abstract class TestCase extends Orchestra
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     protected function defineDatabaseMigrations()
     {
