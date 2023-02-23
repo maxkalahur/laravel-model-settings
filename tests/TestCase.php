@@ -7,6 +7,7 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use MaxKalahur\LaravelModelSettings\Tests\Models\DummyUser;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 abstract class TestCase extends Orchestra
