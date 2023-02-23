@@ -55,7 +55,9 @@ jobs:
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
       - name: Generate key
-        run: php /home/runner/work/laravel-model-settings/laravel-model-settings/artisan key:generate
+        run: |
+          pwd
+          php artisan key:generate
       - name: Execute tests
         run: vendor/bin/phpunit
         env:
