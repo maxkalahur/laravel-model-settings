@@ -2,10 +2,10 @@
 
 namespace MaxKalahur\LaravelModelSettings\Tests\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use MaxKalahur\LaravelModelSettings\Traits\HasCustomSettings;
 
-class DummyUser extends Authenticatable
+class DummyUser extends Model
 {
     use HasCustomSettings;
 
