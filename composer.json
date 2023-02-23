@@ -26,8 +26,6 @@
         "nunomaduro/collision": "^5.10|^6.2.1|^6.1",
         "nunomaduro/larastan": "^1.0.3|^2.4"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "MaxKalahur\\LaravelModelSettings\\": "src/"
@@ -41,6 +39,9 @@
     "scripts": {
         "test": "vendor/bin/phpunit"
     },
+    "config": {
+        "sort-packages": true
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -48,4 +49,6 @@
             ]
         }
     }
+    "minimum-stability": "dev",
+    "prefer-stable": true,
 }
