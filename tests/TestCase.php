@@ -6,9 +6,6 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use MaxKalahur\LaravelModelSettings\CustomSettingServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use MaxKalahur\LaravelModelSettings\Tests\Models\DummyUser;
-
 abstract class TestCase extends Orchestra
 {
     use DatabaseTransactions;
