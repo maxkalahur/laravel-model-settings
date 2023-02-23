@@ -7,6 +7,7 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use MaxKalahur\LaravelModelSettings\Tests\Models\DummyUser;
+use Illuminate\Support\Facades\Schema;
 
 abstract class TestCase extends Orchestra
 {
@@ -16,16 +17,21 @@ abstract class TestCase extends Orchestra
     {
         parent::setUp();
 
+        Schema::create('test_users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->timestamps();
+        });
+        
         DummyUser::create([
             'name' => 'Test',
             'email' => 'test@test.com',
-            'password' => '123',
         ]);
     }
 
     protected function defineDatabaseMigrations()
     {
-        $this->loadLaravelMigrations();
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
