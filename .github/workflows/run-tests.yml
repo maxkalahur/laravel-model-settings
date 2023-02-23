@@ -54,13 +54,10 @@ jobs:
         run: |
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
-      - name: Generate key
-        run: |
-          ls -la
-          php artisan key:generate
       - name: Execute tests
         run: vendor/bin/phpunit
         env:
           DB_USERNAME: user
           DB_PASSWORD: secret
           DB_PORT: ${{ job.services.mysql.ports[3306] }}
+          APP_KEY: base64:aW9yNG81bWo5dTdlaWx1NHU0eHRvdjcxbXBycjVlcDk=
