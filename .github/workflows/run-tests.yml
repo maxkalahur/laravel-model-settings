@@ -60,4 +60,3 @@ jobs:
           DB_USERNAME: user
           DB_PASSWORD: secret
           DB_PORT: ${{ job.services.mysql.ports[3306] }}
-          APP_KEY: base64:aW9yNG81bWo5dTdlaWx1NHU0eHRvdjcxbXBycjVlcDk=
