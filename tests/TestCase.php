@@ -30,6 +30,13 @@ abstract class TestCase extends Orchestra
             'email' => 'test@test.com',
         ]);
     }
+    
+    public function tearDown(): void
+    {
+        parent::tearDown();
+        
+        Schema::drop('test_users');   
+    }
 
     protected function defineDatabaseMigrations()
     {
