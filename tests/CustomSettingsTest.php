@@ -24,7 +24,10 @@ class CustomSettingsTest extends TestCase
             ['NULL',      null],
         ];
 
-        $this->model = DummyUser::first();
+        $this->model = DummyUser::create([
+            'name' => 'Test',
+            'email' => 'test@test.com',
+        ]);
     }
 
     public function test_settings_fill_and_delete()

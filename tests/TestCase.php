@@ -12,16 +12,6 @@ abstract class TestCase extends Orchestra
 {
     use RefreshDatabase;
 
-    public function setUp(): void
-    {
-        parent::setUp();
-        
-        DummyUser::create([
-            'name' => 'Test',
-            'email' => 'test@test.com',
-        ]);
-    }
-
     protected function defineDatabaseMigrations()
     {
         $this->loadMigrationsFrom(__DIR__.'/migrations');
