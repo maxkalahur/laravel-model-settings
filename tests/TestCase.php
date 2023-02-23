@@ -18,14 +18,14 @@ abstract class TestCase extends Orchestra
     {
         parent::setUp();
 
-        if (!Schema::hasTable('test_users')) {
-            Schema::create('test_users', function (Blueprint $table) {
-                $table->id();
-                $table->string('name');
-                $table->string('email');
-                $table->timestamps();
-            });
-        }
+        Schema::create('test_users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->timestamps();
+        });
+        
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         
         DummyUser::create([
             'name' => 'Test',
@@ -38,11 +38,11 @@ abstract class TestCase extends Orchestra
         parent::tearDown();
         
         Schema::drop('test_users');   
+        Schema::drop('custom_settings');  
     }
 
     protected function defineDatabaseMigrations()
     {
-        $this->loadLaravelMigrations();
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
