@@ -1,3 +1,4 @@
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/maxkalahur/laravel-model-settings.svg)](https://packagist.org/packages/maxkalahur/laravel-model-settings)
 [![Run Tests](https://github.com/maxkalahur/laravel-model-settings/actions/workflows/run-tests.yml/badge.svg?branch=master)](https://github.com/maxkalahur/laravel-model-settings/actions/workflows/run-tests.yml)
 [![Check & fix styling](https://github.com/maxkalahur/laravel-model-settings/actions/workflows/pint.yml/badge.svg?branch=master)](https://github.com/maxkalahur/laravel-model-settings/actions/workflows/pint.yml)
 
