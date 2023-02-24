@@ -88,3 +88,13 @@ foreach (range(1, 10) as $i) {
 }
 ```
 **Encription**: ENV `APP_KEY` is used for encryption, so please keep it safely.
+
+## Testing
+
+```bash
+composer test
+```
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
