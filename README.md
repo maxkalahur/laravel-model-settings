@@ -1,3 +1,6 @@
+[![Run Tests](https://github.com/maxkalahur/laravel-model-settings/actions/workflows/run-tests.yml/badge.svg?branch=master)](https://github.com/maxkalahur/laravel-model-settings/actions/workflows/run-tests.yml)
+[![Check & fix styling](https://github.com/maxkalahur/laravel-model-settings/actions/workflows/pint.yml/badge.svg?branch=master)](https://github.com/maxkalahur/laravel-model-settings/actions/workflows/pint.yml)
+
 # laravel-model-settings
 This Laravel package allows to: 
 - **attach settings to Laravel Models** 
