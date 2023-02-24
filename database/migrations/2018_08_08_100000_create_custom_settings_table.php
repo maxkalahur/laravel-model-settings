@@ -15,7 +15,7 @@ class CreateCustomSettingsTable extends Migration
     {
         Schema::create('custom_settings', function (Blueprint $table) {
             $table->id();
-            $table->string('type')->enum(['boolean','integer','double','string','NULL']);
+            $table->string('type')->enum(['boolean', 'integer', 'double', 'string', 'NULL']);
             $table->string('key');
             $table->integer('model_id')->nullable();
             $table->string('model_type')->nullable();

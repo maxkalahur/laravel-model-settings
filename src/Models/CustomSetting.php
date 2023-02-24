@@ -9,14 +9,14 @@ use Illuminate\Database\Eloquent\Model;
  * DON'T USE THIS MODEL DIRECTLY!
  * TO ADD SETTINGS TO SOME MODEL USE TRAIT "MaxKalahur\LaravelModelSettings\Traits\HasSettings"
  */
-
 class CustomSetting extends Model
 {
     use HasFactory;
 
-    const DATA_TYPES = ['boolean','integer','double','string','NULL'];
+    const DATA_TYPES = ['boolean', 'integer', 'double', 'string', 'NULL'];
 
     private $modelId;
+
     private $modelType;
 
     protected $table = 'custom_settings';

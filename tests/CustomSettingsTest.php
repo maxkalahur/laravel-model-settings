@@ -2,13 +2,13 @@
 
 namespace MaxKalahur\LaravelModelSettings\Tests;
 
-use MaxKalahur\LaravelModelSettings\Tests\TestCase;
 use Illuminate\Database\Eloquent\Model;
 use MaxKalahur\LaravelModelSettings\Tests\Models\DummyUser;
 
 class CustomSettingsTest extends TestCase
 {
     private $settingsTetsData;
+
     private Model $model;
 
     public function setUp(): void
@@ -32,8 +32,7 @@ class CustomSettingsTest extends TestCase
 
     public function test_settings_fill_and_delete()
     {
-        foreach( $this->settingsTetsData as $key => $valArr ) {
-
+        foreach ($this->settingsTetsData as $key => $valArr) {
             [$type,$val] = $valArr;
 
             $settingsObj = $this->model->setCustomSetting($key, $val);
@@ -44,19 +43,17 @@ class CustomSettingsTest extends TestCase
             $this->assertEquals(get_class($this->model), $settingsObj->model_type);
 
             $settingsVal = $this->model->getCustomSetting($key);
-            $this->assertEquals( $val, $settingsVal );
-            $this->assertEquals( $type, gettype($settingsVal) );
+            $this->assertEquals($val, $settingsVal);
+            $this->assertEquals($type, gettype($settingsVal));
 
             $this->assertEquals(true, $this->model->deleteCustomSetting($key));
             $this->assertEquals(null, $this->model->deleteCustomSetting($key));
         }
     }
 
-
     public function test_settings_fill_encrypted()
     {
-        foreach( $this->settingsTetsData as $key => $valArr ) {
-
+        foreach ($this->settingsTetsData as $key => $valArr) {
             [$type,$val] = $valArr;
 
             $settingsObj = $this->model->setCustomSetting($key, $val, true);
@@ -67,20 +64,20 @@ class CustomSettingsTest extends TestCase
             $this->assertEquals(get_class($this->model), $settingsObj->model_type);
 
             $settingsVal = $this->model->getCustomSetting($key);
-            $this->assertEquals( $val, $settingsVal );
-            $this->assertEquals( $type, gettype($settingsVal) );
+            $this->assertEquals($val, $settingsVal);
+            $this->assertEquals($type, gettype($settingsVal));
         }
     }
 
     public function test_settings_get_all()
     {
         $testArr = [
-            'test1'=>true,
-            'test2'=>123,
-            'test3'=>"123"
+            'test1' => true,
+            'test2' => 123,
+            'test3' => '123',
         ];
-        array_walk($testArr, fn($val, $key) => $this->model->setCustomSetting($key, $val));
-        $this->assertEquals($testArr,$this->model->getAllCustomSettings());
+        array_walk($testArr, fn ($val, $key) => $this->model->setCustomSetting($key, $val));
+        $this->assertEquals($testArr, $this->model->getAllCustomSettings());
     }
 
     public function test_settings_wrong_type_array_exception()

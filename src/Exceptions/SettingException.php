@@ -2,19 +2,19 @@
 
 namespace MaxKalahur\LaravelModelSettings\Exceptions;
 
-use Illuminate\Database\Eloquent\Model;
 use Exception;
+use Illuminate\Database\Eloquent\Model;
 
 class SettingException extends Exception
 {
     protected Model $model;
 
-    public function withModel( Model $model ) : self
-	{
-		$this->model = $model;
+    public function withModel(Model $model): self
+    {
+        $this->model = $model;
 
-		return $this;
-	}
+        return $this;
+    }
 
     /**
      * Get the exception's context information.
