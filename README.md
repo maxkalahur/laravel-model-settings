@@ -15,7 +15,7 @@ Data types that can be used in CustomSettings:
 - `string`
 - `NULL`
 
-Laravel versions supported: 7,8,9.
+Laravel versions supported: 8+
 ## Instalation
 ```
 composer require maxkalahur/laravel-model-settings
