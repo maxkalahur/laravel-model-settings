@@ -22,6 +22,7 @@ class CustomSettingsTest extends TestCase
             ['double',    123.123],
             ['string',    'test test'],
             ['NULL',      null],
+            ['array',      [1, 'Max', null, false, '3']],
         ];
 
         $this->model = DummyUser::create([

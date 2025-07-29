@@ -28,11 +28,9 @@ trait HasCustomSettings
 
         // in case settings were eager loaded with `with()` previously, to prevent N+1 error
         if ($this->relationLoaded('customSettings')) {
-            $setting = $this->settings->firstWhere('key', $key);
-        }
-
-        if (! $setting) {
             $setting = $this->customSettings()->firstWhere('key', $key);
+        } else {
+            $setting = $this->customSettings()->where('key', $key)->first();
         }
 
         if ($setting) {
@@ -45,6 +43,11 @@ trait HasCustomSettings
             if ($setting->type == 'boolean') {
                 return ($val == 'true') ? true : false;
             }
+
+            if ($setting->type == 'array') {
+                return (array) json_decode($val, true);
+            }
+
             settype($val, $setting->type);
 
             return $val;
@@ -100,6 +103,10 @@ trait HasCustomSettings
             $value = $value ? 'true' : 'false';
         }
 
+        if ($valueType == 'array') {
+            $value = json_encode($value);
+        }
+        
         if ($isEncrypted && $value) {
             $value = Crypt::encryptString($value);
         }

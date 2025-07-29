@@ -13,13 +13,13 @@ class CustomSetting extends Model
 {
     use HasFactory;
 
-    const DATA_TYPES = ['boolean', 'integer', 'double', 'string', 'NULL'];
+    const DATA_TYPES = ['boolean', 'integer', 'double', 'string', 'NULL', 'array'];
 
     private $modelId;
 
     private $modelType;
 
-    protected $table = 'custom_settings';
+    protected $table = 'settings';
 
     protected $fillable = [
         'type',
