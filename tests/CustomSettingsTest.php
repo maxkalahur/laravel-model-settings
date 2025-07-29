@@ -11,7 +11,7 @@ class CustomSettingsTest extends TestCase
 
     private Model $model;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 

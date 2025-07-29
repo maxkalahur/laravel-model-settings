@@ -106,7 +106,7 @@ trait HasCustomSettings
         if ($valueType == 'array') {
             $value = json_encode($value);
         }
-        
+
         if ($isEncrypted && $value) {
             $value = Crypt::encryptString($value);
         }
