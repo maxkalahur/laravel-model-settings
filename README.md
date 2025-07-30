@@ -14,6 +14,7 @@ Data types that can be used in CustomSettings:
 - `double`
 - `string`
 - `NULL`
+- `array`
 
 Laravel versions supported: 8+
 ## Instalation
@@ -84,7 +85,7 @@ DummyOrg::whereNotNull('name')
 $org = DummyOrg::with('customSettings')->first();
 
 foreach (range(1, 10) as $i) {
-    $org->getCustomSetting('ADDRESS');   // no calls to DB
+    $org->getCustomSetting('ADDRESS');   // no extra calls to DB
 }
 ```
 **Encription**: ENV `APP_KEY` is used for encryption, so please keep it safely.
