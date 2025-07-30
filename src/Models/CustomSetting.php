@@ -19,7 +19,7 @@ class CustomSetting extends Model
 
     private $modelType;
 
-    protected $table = 'settings';
+    protected $table = 'custom_settings';
 
     protected $fillable = [
         'type',
