@@ -4,7 +4,22 @@
     "license": "MIT",
     "keywords": [
         "laravel",
-        "settings"
+        "settings",
+        "custom properties",
+        "model settings",
+        "model properties",
+        "model attributes",
+        "model metadata",
+        "model options",
+        "model configuration",
+        "model custom fields",
+        "model custom attributes",
+        "model custom properties",
+        "model custom settings",
+        "model custom options",
+        "model custom metadata",
+        "model custom configuration",
+        "model custom fields"
     ],
     "authors": [
         {
