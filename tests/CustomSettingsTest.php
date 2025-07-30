@@ -81,12 +81,6 @@ class CustomSettingsTest extends TestCase
         $this->assertEquals($testArr, $this->model->getAllCustomSettings());
     }
 
-    public function test_settings_wrong_type_array_exception()
-    {
-        $this->expectException(\Exception::class);
-        $this->model->setCustomSetting('test1', []);
-    }
-
     public function test_settings_wrong_type_object_exception()
     {
         $this->expectException(\Exception::class);

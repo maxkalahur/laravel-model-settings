@@ -17,6 +17,6 @@ class DummyUser extends Model
     ];
 
     private $customSettings = [
-        0, 1, 2, 3, 4, 5, 'test1', 'test2', 'test3',
+        0, 1, 2, 3, 4, 5, 6, 'test1', 'test2', 'test3',
     ];
 }
